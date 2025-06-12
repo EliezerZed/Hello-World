@@ -1,7 +1,4 @@
 print("Hello to my Simple Login Register Program")
-
-select0 = ""
-
 #Function
 def login():
     if user_name in usernames:
@@ -21,10 +18,11 @@ def auth():
             passwords.append(new_pass)
             print("Account created successfully.")
 
-
 ##Start
 usernames = ["admin"]
 passwords = ["admin"]
+select0 = ""
+select1 = ""
 while select0 != "3":
     select0 = input("Press \n[1]: Login\n[2]: Create Account\n[3]: Quit\n")
 
@@ -32,6 +30,8 @@ while select0 != "3":
         user_name = input("Username: ")
         password = input("Password: ")
         login()
+        location = input("Where are you located? ")
+        print("this is your location: "+location)
 
 
     elif select0 == "2":
